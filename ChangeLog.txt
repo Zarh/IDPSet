@@ -1,0 +1,115 @@
+v0.88
+-Add : Support IDPS from latest ps3 models
+-Add : Dupport fw to dump the eid_root_key
+
+v0.87
+-Added : fw independant
+-Added : root key dumper 4.75D (thanks to Joonie who ported it)
+-Added : more message in the log to be more aware of what's going on and also to allow me to know precisly what's causing some 'random' freeze (thanks to your feedbacks ofc)
+
+Note :
+-The root key dumper and Converter are not fw indepedant
+-We can't write PSP IDPS in the EID0 without bricking the system.
+
+v0.86
+-fix : no more freeze when you dump your key for firmware under 4.65.
+
+v0.85
+-Added: Background image (a PNG is: /USRDIR/BG.PNG)
+-Added: Homebrew support fw 4.70 and 4.75
+-Added: The root key dumper support fw 4.70C, 4.70D and 4.75
+
+v0.84
+-Added : Swap of "software_update_plugin.sprx"
+
+v0.83
+Fix : No more freeze when making CEX&DEX dumps with a DEX system
+
+v0.80
+-fix : The dumps no longer have the attribute "system"
+
+v0.79
+-fix : Les fichiers n'ont plus l'attribut "system"
+-fix : bug d'affichage sur la bar de progression
+
+v0.78
+-fix : changement de "/dev_hdd0/temp/eid_root_key" à "/dev_hdd0/tmp/eid_root_key"
+-fix exit freeze : Ajout du déchargement des modules à la sortis de l'homebrew
+
+v0.76
+_fix : correction d'une coquille sur l'affichage d'un des messages lors du "make dump"
+_Add : Ajout de la version dans le TITLE du param.sfo
+
+v0.75
+-fix freeze : lors dump root_key
+-Add : root key sauvegarder à "/dev_usb000/eid_root_key" sinon "/dev_hdd0/tmp/eid_root_key"
+-Add : Ajout d'une barre de progression pour les copies de fichiers
+
+v0.70
+-Add : nouveau GUI
+-Removed : tout ce qui est en rapport avec le PSID
+-Removed : "save/load from/to file
+-Add : "dump eid_root_key"
+-Add : "Convert to DEX/CEX"
+-Add : "Make CEX/DEX dumps" est plus rapide
+
+v0.63
+Add : compatible fw 4.65
+
+v0.62
+-Fix : ptit bug
+
+v0.61
+-Fix : le nom des dumps. Le dump dex s'appelais CEX-FLASH... et le dump cex s'appelais DEX-FLASH... tssss.
+
+v0.6
+-Add : changement d'idps dans la section 6 de l'eid0
+-Change : nom "IDPS tool" à "IDPSet"
+-Change : ICON0
+-Add : écriture des dump DEX/CEX dans la clé USB
+
+v0.5
+-Add : "Load IDPS from EID0"
+-Add : "Save PSID to EID0"
+
+v0.43
+-add : Menu
+-Add : changement PSID lv2 via fichier .bin
+
+v0.41
+-Fix : petit bug
+
+v0.40
+-Removed : offset idps "fixe" donc c'est maintenant compatible avec tout les firmware y compris les futurs fw
+-Add : Dump CEX/DEX 
+-Add : ICON0 animés <3
+-Removed : "Convert DEX/CEX" pour + de securité car switch kernel est necessaire
+
+v0.34
+-Fix : petit bug
+
+v0.33
+-Add : changement d'idps dans l'eid5
+
+v0.32
+-Add : "load original idps from EID5" 
+-Add : "Convert to DEX/CEX"
+-fix : petit bug
+
+v0.31
+-Add : "Change IDPS in EDI0" compatible avec les NAND et NOR
+
+v0.3 
+-Add : "Change IDPS in EID0"  compatible uniquement pour le NOR
+
+v0.22
+-Add : 3eme offset de l'IDPS
+
+v0.21 
+-Add : "Save et load idps"
+
+v0.2
+-Add : Curseur pour modifié l'IDPS
+
+v0.1
+-version initiale
