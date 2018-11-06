@@ -78,6 +78,7 @@
 #include "payload_481D_bin.h"
 #include "payload_482C_bin.h"
 #include "payload_482D_bin.h"
+#include "payload_483C_bin.h"
 
 #include "NOT_PNG_bin.h"
 
@@ -1015,7 +1016,25 @@ int init_IDPSet()
 
 		payload = (u64 *) payload_482D_bin;
 		payload_size = payload_482D_bin_size;
-	} 
+	}  else
+	if(( lv2peek(FW_DATE_OFFSET_483C    )==FW_DATE_1_483C) &&
+	   ( lv2peek(FW_DATE_OFFSET_483C + 8)==FW_DATE_2_483C) )
+	{
+		firmware = 0x482D;
+
+		TOC_OFFSET = TOC_OFFSET_483C;
+		HV_START_OFFSET = HV_START_OFFSET_483C;
+		HTAB_OFFSET = HTAB_OFFSET_483C;
+		SYSCALL_TABLE_OFFSET = SYSCALL_TABLE_483C;
+		MMAP_OFFSET1 = MMAP_OFFSET1_483C;
+		MMAP_OFFSET2 = MMAP_OFFSET2_483C;
+		SPE_OFFSET = SPE_OFFSET_483C;
+		OFFSET_1_IDPS = OFFSET_1_IDPS_483C;
+		OFFSET_2_IDPS = OFFSET_2_IDPS_483C;
+
+		payload = (u64 *) payload_483C_bin;
+		payload_size = payload_483C_bin_size;
+	}
 	else { // firmware inconnu
 		u64 n;
 		for(n=0x350000; n<0x4A0000; n++) {

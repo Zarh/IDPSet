@@ -15,7 +15,7 @@ include $(PSL1GHT)/ppu_rules
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-VERSION     := 0.88
+VERSION     := 0.89
 NAME        := IDPSet
 
 TARGET		:= $(NAME)_v$(VERSION)
@@ -139,6 +139,10 @@ run:
 #---------------------------------------------------------------------------------
 pkg:	$(BUILD) $(OUTPUT).pkg
 
+#---------------------------------------------------------------------------------
+payloads:
+	@rm -fr data/payload*
+	@$(MAKE) -C payload/source --no-print-directory
 #---------------------------------------------------------------------------------
 else
 

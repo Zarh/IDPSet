@@ -1,6 +1,9 @@
+v0.89
+-Add : Support fw 4.83C
+
 v0.88
 -Add : Support IDPS from latest ps3 models
--Add : Dupport fw to dump the eid_root_key
+-Add : eid_root_key dumper is working on almost every cfw
 
 v0.87
 -Added : fw independant
