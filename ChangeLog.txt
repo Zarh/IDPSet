@@ -1,3 +1,11 @@
+v0.91
+-Add : Support fw 4.85C
+
+v0.90
+-Add : Support fw 4.84C and 4.84D
+
+Note : Updated by theheroGAC
+
 v0.89
 -Add : Support fw 4.83C
 
