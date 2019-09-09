@@ -81,6 +81,8 @@
 #include "payload_483C_bin.h"
 #include "payload_484C_bin.h"
 #include "payload_484D_bin.h"
+#include "payload_485C_bin.h"
+#include "payload_485D_bin.h"
 
 #include "NOT_PNG_bin.h"
 
@@ -1072,6 +1074,42 @@ int init_IDPSet()
 
 		payload = (u64 *) payload_484D_bin;
 		payload_size = payload_484D_bin_size;
+	}  else
+	if(( lv2peek(FW_DATE_OFFSET_485C    )==FW_DATE_1_485C) &&
+	   ( lv2peek(FW_DATE_OFFSET_485C + 8)==FW_DATE_2_485C) )
+	{
+		firmware = 0x485C;
+
+		TOC_OFFSET = TOC_OFFSET_485C;
+		HV_START_OFFSET = HV_START_OFFSET_485C;
+		HTAB_OFFSET = HTAB_OFFSET_485C;
+		SYSCALL_TABLE_OFFSET = SYSCALL_TABLE_485C;
+		MMAP_OFFSET1 = MMAP_OFFSET1_485C;
+		MMAP_OFFSET2 = MMAP_OFFSET2_485C;
+		SPE_OFFSET = SPE_OFFSET_485C;
+		OFFSET_1_IDPS = OFFSET_1_IDPS_485C;
+		OFFSET_2_IDPS = OFFSET_2_IDPS_485C;
+
+		payload = (u64 *) payload_485C_bin;
+		payload_size = payload_485C_bin_size;
+	}  else
+	if(( lv2peek(FW_DATE_OFFSET_485D    )==FW_DATE_1_485D) &&
+	   ( lv2peek(FW_DATE_OFFSET_485D + 8)==FW_DATE_2_485D) )
+	{
+		firmware = 0x485D;
+
+		TOC_OFFSET = TOC_OFFSET_485D;
+		HV_START_OFFSET = HV_START_OFFSET_485D;
+		HTAB_OFFSET = HTAB_OFFSET_485D;
+		SYSCALL_TABLE_OFFSET = SYSCALL_TABLE_485D;
+		MMAP_OFFSET1 = MMAP_OFFSET1_485D;
+		MMAP_OFFSET2 = MMAP_OFFSET2_485D;
+		SPE_OFFSET = SPE_OFFSET_485D;
+		OFFSET_1_IDPS = OFFSET_1_IDPS_485D;
+		OFFSET_2_IDPS = OFFSET_2_IDPS_485D;
+
+		payload = (u64 *) payload_485D_bin;
+		payload_size = payload_485D_bin_size;
 	}
 	else { // firmware inconnu
 		u64 n;
