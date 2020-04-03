@@ -1,4 +1,7 @@
 v0.91
+-Add : Support fw 4.86C
+
+v0.91
 -Add : Support fw 4.85C
 
 v0.90
@@ -44,8 +47,8 @@ v0.79
 -fix : bug d'affichage sur la bar de progression
 
 v0.78
--fix : changement de "/dev_hdd0/temp/eid_root_key" à "/dev_hdd0/tmp/eid_root_key"
--fix exit freeze : Ajout du déchargement des modules à la sortis de l'homebrew
+-fix : changement de "/dev_hdd0/temp/eid_root_key" Ã  "/dev_hdd0/tmp/eid_root_key"
+-fix exit freeze : Ajout du dÃ©chargement des modules Ã  la sortis de l'homebrew
 
 v0.76
 _fix : correction d'une coquille sur l'affichage d'un des messages lors du "make dump"
@@ -53,7 +56,7 @@ _Add : Ajout de la version dans le TITLE du param.sfo
 
 v0.75
 -fix freeze : lors dump root_key
--Add : root key sauvegarder à "/dev_usb000/eid_root_key" sinon "/dev_hdd0/tmp/eid_root_key"
+-Add : root key sauvegarder Ã  "/dev_usb000/eid_root_key" sinon "/dev_hdd0/tmp/eid_root_key"
 -Add : Ajout d'une barre de progression pour les copies de fichiers
 
 v0.70
@@ -75,9 +78,9 @@ v0.61
 
 v0.6
 -Add : changement d'idps dans la section 6 de l'eid0
--Change : nom "IDPS tool" à "IDPSet"
+-Change : nom "IDPS tool" Ã  "IDPSet"
 -Change : ICON0
--Add : écriture des dump DEX/CEX dans la clé USB
+-Add : Ã©criture des dump DEX/CEX dans la clÃ© USB
 
 v0.5
 -Add : "Load IDPS from EID0"
@@ -93,8 +96,8 @@ v0.41
 v0.40
 -Removed : offset idps "fixe" donc c'est maintenant compatible avec tout les firmware y compris les futurs fw
 -Add : Dump CEX/DEX 
--Add : ICON0 animés <3
--Removed : "Convert DEX/CEX" pour + de securité car switch kernel est necessaire
+-Add : ICON0 animÃ©s <3
+-Removed : "Convert DEX/CEX" pour + de securitÃ© car switch kernel est necessaire
 
 v0.34
 -Fix : petit bug
@@ -120,7 +123,7 @@ v0.21
 -Add : "Save et load idps"
 
 v0.2
--Add : Curseur pour modifié l'IDPS
+-Add : Curseur pour modifiÃ© l'IDPS
 
 v0.1
 -version initiale
