@@ -694,6 +694,24 @@ int init_IDPSet()
 		payload_size = payload_485C_bin_size;
 		payload = (u64 *) payload_485C_bin;
 	} else
+    if(( lv2peek(FW_DATE_OFFSET_486C    )==FW_DATE_1_486C) &&
+	( lv2peek(FW_DATE_OFFSET_486C + 8)==FW_DATE_2_486C) )
+	{
+			firmware = 0x486C;
+		
+		TOC_OFFSET = TOC_OFFSET_486C;
+		HV_START_OFFSET = HV_START_OFFSET_486C;
+		HTAB_OFFSET = HTAB_OFFSET_486C;
+		SYSCALL_TABLE_OFFSET = SYSCALL_TABLE_486C;
+		MMAP_OFFSET1 = MMAP_OFFSET1_486C;
+		MMAP_OFFSET2 = MMAP_OFFSET2_486C;
+		SPE_OFFSET = SPE_OFFSET_486C;
+		OFFSET_1_IDPS = OFFSET_1_IDPS_486C;
+		OFFSET_2_IDPS = OFFSET_2_IDPS_486C;
+		
+		payload_size = payload_486C_bin_size;
+		payload = (u64 *) payload_486C_bin;
+	} else
 	{
 		u64 n;
 		for(n=0x350000; n<0x4A0000; n++) {

@@ -38,5 +38,6 @@
 #include "payload_484C_bin.h"
 #include "payload_484D_bin.h"
 #include "payload_485C_bin.h"
+#include "payload_486C_bin.h"
 
 #endif /* __DATA_H__ */
