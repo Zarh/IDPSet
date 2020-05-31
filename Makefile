@@ -15,7 +15,7 @@ include $(PSL1GHT)/ppu_rules
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-VERSION     := 0.91
+VERSION     := 0.92
 NAME        := IDPSet
 
 TARGET		:= $(NAME)_v$(VERSION)
@@ -126,7 +126,12 @@ export OUTPUT	:=	$(CURDIR)/$(TARGET)
 $(BUILD):
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
-
+#---------------------------------------------------------------------------------
+update:
+	cd ../ManaGunZ/OffsetFinder; ./OffsetFinder.exe	idpset
+	@$(MAKE) -C payload/spu --no-print-directory
+	@$(MAKE) -C payload/source --no-print-directory
+	
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
