@@ -15,7 +15,7 @@ include $(PSL1GHT)/ppu_rules
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-VERSION     := 0.92
+VERSION     := 0.93
 NAME        := IDPSet
 
 TARGET		:= $(NAME)_v$(VERSION)

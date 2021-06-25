@@ -712,6 +712,42 @@ int init_IDPSet()
 		payload_size = payload_486C_bin_size;
 		payload = (u64 *) payload_486C_bin;
 	} else
+	if(( lv2peek(FW_DATE_OFFSET_487C    )==FW_DATE_1_487C) &&
+	( lv2peek(FW_DATE_OFFSET_487C + 8)==FW_DATE_2_487C) )
+	{
+		firmware = 0x487C;
+		
+		TOC_OFFSET = TOC_OFFSET_487C;
+		HV_START_OFFSET = HV_START_OFFSET_487C;
+		HTAB_OFFSET = HTAB_OFFSET_487C;
+		SYSCALL_TABLE_OFFSET = SYSCALL_TABLE_487C;
+		MMAP_OFFSET1 = MMAP_OFFSET1_487C;
+		MMAP_OFFSET2 = MMAP_OFFSET2_487C;
+		SPE_OFFSET = SPE_OFFSET_487C;
+		OFFSET_1_IDPS = OFFSET_1_IDPS_487C;
+		OFFSET_2_IDPS = OFFSET_2_IDPS_487C;
+		
+		payload_size = payload_487C_bin_size;
+		payload = (u64 *) payload_487C_bin;
+	} else
+	if(( lv2peek(FW_DATE_OFFSET_488C    )==FW_DATE_1_488C) &&
+	( lv2peek(FW_DATE_OFFSET_488C + 8)==FW_DATE_2_488C) )
+	{
+		firmware = 0x488C;
+		
+		TOC_OFFSET = TOC_OFFSET_488C;
+		HV_START_OFFSET = HV_START_OFFSET_488C;
+		HTAB_OFFSET = HTAB_OFFSET_488C;
+		SYSCALL_TABLE_OFFSET = SYSCALL_TABLE_488C;
+		MMAP_OFFSET1 = MMAP_OFFSET1_488C;
+		MMAP_OFFSET2 = MMAP_OFFSET2_488C;
+		SPE_OFFSET = SPE_OFFSET_488C;
+		OFFSET_1_IDPS = OFFSET_1_IDPS_488C;
+		OFFSET_2_IDPS = OFFSET_2_IDPS_488C;
+		
+		payload_size = payload_488C_bin_size;
+		payload = (u64 *) payload_488C_bin;
+	} else
 	{
 		u64 n;
 		for(n=0x350000; n<0x4A0000; n++) {
@@ -737,7 +773,7 @@ int init_IDPSet()
 			if(OFFSET_2_IDPS != 0) break;
 		}
 		if(OFFSET_1_IDPS == 0 || OFFSET_2_IDPS == 0) return FAILED;
-	}
+		}
 	
 	rebug =  fw_is_rebug();
 	
